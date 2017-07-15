@@ -13,7 +13,7 @@
 .list-cell {
     -fx-background-color: black;
     -fx-text-fill: white;
-    -fx-font: 11pt "Perfect DOS VGA 437 Win";
+    -fx-font: 10pt "Perfect DOS VGA 437 Win";
     -fx-border-insets: 0 0 0 0;
     -fx-padding: 0px;
 }

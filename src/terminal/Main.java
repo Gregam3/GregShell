@@ -14,30 +14,29 @@ import terminal.ui.UIController;
 public class Main extends Application {
 
     @SuppressWarnings("converted")
-    static int WIDTH = 650;
-    static int HEIGHT = 330;
-    private static Double VERSION_NUMBER = 1.0;
+    public static int WIDTH = 650;
+    public static int HEIGHT = 330;
+    public static Double VERSION_NUMBER = 1.0;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Console console = new Console();
+        Console.setupCommands();
         Pane root = new Pane();
 
         primaryStage.getIcons().add(
                 new Image("file:src\\resources\\icon.png")
         );
 
-        root.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
+        root.getStylesheets().add(getClass().getResource("ui\\stylesheet.css").toExternalForm());
 
-        UIController uiController = new UIController(root);
-        uiController.setUpInterface();
+        UIController.setUpInterface(root);
 
 
         primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
             if (key.getCode() == KeyCode.ENTER) {
-                String command = uiController.getStringFromCommandLine();
-                uiController.addCommandToList(command);
-                console.submitCommand(command);
+                String command = UIController.getStringFromCommandLine();
+                UIController.addToTerminal(command);
+                Console.submitCommand(command);
             }
         });
 

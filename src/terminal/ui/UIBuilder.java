@@ -17,6 +17,7 @@ class UIBuilder {
         labelListView.setPrefSize(Main.WIDTH, Main.HEIGHT - (Main.HEIGHT / 10));
         labelListView.setLayoutX(0);
         labelListView.setLayoutY(0);
+        labelListView.setFocusTraversable(false);
 
 
         return labelListView;
