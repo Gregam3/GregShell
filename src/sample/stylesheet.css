@@ -1,0 +1,19 @@
+.text-field {
+  -fx-text-box-border: transparent;
+  -fx-focus-color: transparent;
+  -fx-background-color: black;
+  -fx-text-fill: white;
+}
+
+.list-view {
+    -fx-background-color: black;
+    -fx-background-insets: 0;
+}
+
+.list-cell {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font: 11pt "Perfect DOS VGA 437 Win";
+    -fx-border-insets: 0 0 0 0;
+    -fx-padding: 0px;
+}
