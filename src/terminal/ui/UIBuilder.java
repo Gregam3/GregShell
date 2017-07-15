@@ -1,13 +1,11 @@
-package sample;
+package terminal.ui;
 
-import com.sun.org.apache.regexp.internal.RE;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
-
-import javax.swing.text.LabelView;
+import terminal.Main;
 
 /**
  * Created by i7676925 on 04/07/2017.

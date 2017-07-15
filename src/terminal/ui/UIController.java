@@ -1,4 +1,4 @@
-package sample;
+package terminal.ui;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
