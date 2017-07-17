@@ -34,7 +34,7 @@ public class UIController {
 
     public static void addToTerminal(String command) {
         submittedCommands.add(command);
-        ((TextField) root.getChildren().get(0)).setText("");
+        ((TextField) root.getChildren().get(0)).clear();
         ((ListView)root.getChildren().get(1)).setItems(submittedCommands);
     }
 

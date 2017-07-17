@@ -1,5 +1,6 @@
 package terminal;
 
+import com.jaunt.ResponseException;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -35,8 +36,13 @@ public class Main extends Application {
         primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
             if (key.getCode() == KeyCode.ENTER) {
                 String command = UIController.getStringFromCommandLine();
-                UIController.addToTerminal(command);
-                Console.submitCommand(command);
+                try {
+                    UIController.addToTerminal(command);
+                    Console.submitCommand(command);
+                } catch (Exception e) {
+                    UIController.addToTerminal(e.getClass().getSimpleName() +": " +e.getMessage());
+                    e.printStackTrace();
+                }
             }
         });
 

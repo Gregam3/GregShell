@@ -1,21 +1,15 @@
 package terminal.functionality.cls;
 
-import terminal.functionality.Command;
-import terminal.functionality.Console;
+import terminal.functionality.AbstractCommand;
 import terminal.ui.UIController;
 
 /**
  * Created by i7676925 on 15/07/2017.
  */
-public class Cls implements Command{
+public class Cls extends AbstractCommand {
 
     @Override
-    public void execute() {
+    public void execute(Object o) throws Exception {
         UIController.clearCommands();
-    }
-
-    @Override
-    public void setUp() {
-        Console.registerCommand(this.getClass().getSimpleName(), this);
     }
 }
