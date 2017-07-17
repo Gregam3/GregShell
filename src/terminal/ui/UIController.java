@@ -39,10 +39,12 @@ public class UIController {
     }
 
     public static void commandNotFound(String commandName) {
-
+        addToTerminal("The command \"" +commandName +"\" was not found." );
     }
 
     public static void clearCommands() {
         submittedCommands.clear();
     }
+
+
 }

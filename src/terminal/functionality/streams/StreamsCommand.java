@@ -11,7 +11,7 @@ import terminal.ui.UIController;
  * Created by i7676925 on 15/07/2017.
  */
 //TODO register a callback URI so you can access their API instead
-public class Streams extends AbstractCommand {
+public class StreamsCommand extends AbstractCommand {
 
     private final String username = "GregShellBot";
     private final String password = "thisisabot";
