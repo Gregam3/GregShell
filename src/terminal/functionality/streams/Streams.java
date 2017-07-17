@@ -18,7 +18,7 @@ public class Streams extends AbstractCommand {
 
 
     @Override
-    public void execute() throws ResponseException, SearchException {
+    public void execute(String parameters) throws ResponseException, SearchException {
         UserAgent userAgent = new UserAgent();
         userAgent.visit("http://twitch.tv/login");
 

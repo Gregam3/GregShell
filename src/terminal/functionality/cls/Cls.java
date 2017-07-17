@@ -9,7 +9,7 @@ import terminal.ui.UIController;
 public class Cls extends AbstractCommand {
 
     @Override
-    public void execute(Object o) throws Exception {
+    public void execute(String parameters) throws Exception {
         UIController.clearCommands();
     }
 }

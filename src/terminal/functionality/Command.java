@@ -10,6 +10,6 @@ import java.io.IOException;
 /**
  * Created by i7676925 on 15/07/2017.
  */
-public interface Command <T> {
-    public void execute(T t) throws Exception;
+public interface Command  {
+    public void execute(String parameters) throws Exception;
 }

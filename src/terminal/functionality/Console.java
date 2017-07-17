@@ -16,20 +16,20 @@ import java.util.regex.Pattern;
 public class Console {
     private static Map<String, Command> commandMappings = new HashMap<>();
 
-    private static final Pattern commandPattern = Pattern.compile("([^ ]) (.*)");
+    private static final Pattern commandPattern = Pattern.compile("([^ ].*) (.*)");
 
+    public static void submitCommand(String userInput) throws Exception {
+        Matcher matcher = commandPattern.matcher(userInput);
 
-    public static void submitCommand(String commandName) throws Exception {
-        Matcher matcher = commandPattern.matcher(commandName);
+        Command command = null;
 
-        //Necessary to be called for regex searching
-        matcher.find();
+        if (matcher.find())
+            command = commandMappings.get(matcher.group(1));
 
-        Command command = commandMappings.get(matcher.group(1));
         if (command == null)
-            UIController.addToTerminal("Command \"" + commandName + "\" is not a recognised command.");
+            UIController.commandNotFound(userInput);
         else
-            commandMappings.get(commandName).execute(matcher.group(2));
+            commandMappings.get(matcher.group(1)).execute(matcher.group(2));
     }
 
     public static void registerCommand(String commandName, Command command) {

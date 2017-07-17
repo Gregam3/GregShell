@@ -38,6 +38,10 @@ public class UIController {
         ((ListView)root.getChildren().get(1)).setItems(submittedCommands);
     }
 
+    public static void commandNotFound(String commandName) {
+
+    }
+
     public static void clearCommands() {
         submittedCommands.clear();
     }
