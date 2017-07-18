@@ -23,7 +23,8 @@ public class Console {
         String commandName = userInput.split(" ")[0];
         String parameters = null;
 
-        if (userInput.contains(" ")) parameters = userInput.substring(commandName.length() + 1, userInput.length());
+        if (userInput.contains(" "))
+            parameters = userInput.substring(commandName.length() + 1, userInput.length());
 
         Command command = commandMappings.get(commandName);
 
