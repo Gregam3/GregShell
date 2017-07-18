@@ -3,6 +3,7 @@ package terminal.functionality;
 import terminal.functionality.cls.ClsCommand;
 import terminal.functionality.exit.ExitCommand;
 import terminal.functionality.google.GoogleCommand;
+import terminal.functionality.regtabs.RegTabsCommand;
 import terminal.functionality.streams.StreamsCommand;
 import terminal.functionality.twitch.TwitchCommand;
 import terminal.ui.UIController;
@@ -42,5 +43,6 @@ public class Console {
         new TwitchCommand().setUp();
         new GoogleCommand().setUp();
         new ExitCommand().setUp();
+        new RegTabsCommand().setUp();
     }
 }
