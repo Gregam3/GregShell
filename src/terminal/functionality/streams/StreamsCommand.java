@@ -1,7 +1,5 @@
 package terminal.functionality.streams;
 
-import com.jaunt.ResponseException;
-import com.jaunt.SearchException;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -18,21 +16,26 @@ import java.io.IOException;
 //TODO register a callback URI so you can access their API instead
 public class StreamsCommand extends AbstractCommand {
 
-    private final String username = "GregShellBot";
-    private final String password = "thisisabot";
+    private final String CLIENT_ID = "2oibbr9895k1w9dd6ke5in4l0st6p7";
+    private final String USERNAME = "GregShellBot";
+    private final String PASSWORD = "thisisabot";
 
     //https://api.twitch.tv/kraken/users/GregShellBot/follows/channels?client_id=2oibbr9895k1w9dd6ke5in4l0st6p7
 
 
     @Override
-    public void execute(String parameters) throws ResponseException, SearchException, IOException, UnirestException {
+    public void execute(String parameters) throws IOException, UnirestException {
+
+
         HttpResponse<JsonNode> jsonNodeHttpResponse = Unirest.get("https://api.twitch.tv/kraken/streams/followed")
                 .header("Accept", "application/vnd.twitchtv.v5+json")
-                .header("Client-Id", "2oibbr9895k1w9dd6ke5in4l0st6p7")
-                .header("Authorization", "oauth:u224dzzeqn66yvawjs6jl8e4muru7o")
+                .header("Client-Id", CLIENT_ID)
+                .header("Authorization", "OAuth"+)
                 .asJson();
         System.out.println();
+    }
 
+    private String getAuthToken() {
 
     }
 }
