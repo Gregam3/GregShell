@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="GregShell">
+    <output-path>$PROJECT_DIR$/out/artifacts/GregShell</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="terminal.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="GregShell" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="GregShell.jar">
+        <element id="module-output" name="GregShell" />
+      </element>
+      <element id="file-copy" path="$USER_HOME$/Downloads/libraries/commons-codec-1.9.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/libraries/commons-logging-1.2.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/libraries/httpasyncclient-4.1.3.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/httpclient-4.3.3.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/httpcore-4.4.6.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/httpcore-nio-4.1.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/jaunt1.3.1.jar" />
+      <element id="file-copy" path="$USER_HOME$/Downloads/unirest-java-1.4.9.jar" />
+    </root>
+  </artifact>
+</component>

@@ -1,6 +1,5 @@
 package terminal;
 
-import com.jaunt.ResponseException;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -17,7 +16,7 @@ public class Main extends Application {
     @SuppressWarnings("converted")
     public static int WIDTH = 650;
     public static int HEIGHT = 330;
-    public static Double VERSION_NUMBER = 1.0;
+    private static Double VERSION_NUMBER = 1.0;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -25,10 +24,11 @@ public class Main extends Application {
         Pane root = new Pane();
 
         primaryStage.getIcons().add(
-                new Image("file:src\\resources\\icon.png")
+                new Image("file:src/resources/icon.png")
         );
 
-        root.getStylesheets().add(getClass().getResource("ui\\stylesheet.css").toExternalForm());
+        root.getStylesheets().add(getClass().getResource("ui/stylesheet.css").toExternalForm());
+
 
         UIController.setUpInterface(root);
 
@@ -52,6 +52,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 }

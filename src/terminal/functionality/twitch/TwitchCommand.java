@@ -1,12 +1,8 @@
 package terminal.functionality.twitch;
 
-import com.sun.deploy.util.StringUtils;
-import terminal.Exceptions.InvalidParameterException;
+import terminal.exceptions.InvalidParameterException;
 import terminal.functionality.AbstractCommand;
 import terminal.functionality.Console;
-import terminal.ui.UIController;
-
-import java.io.OutputStream;
 
 /**
  * Created by i7676925 on 16/07/2017.

@@ -34,7 +34,7 @@ public class Console {
             commandMappings.get(commandName).execute(parameters);
     }
 
-    public static void registerCommand(String commandName, Command command) {
+    static void registerCommand(String commandName, Command command) {
         commandMappings.put(commandName.toLowerCase(), command);
     }
 

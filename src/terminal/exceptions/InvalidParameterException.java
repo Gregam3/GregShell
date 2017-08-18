@@ -1,4 +1,4 @@
-package terminal.Exceptions;
+package terminal.exceptions;
 
 /**
  * Created by Greg Mitten on 17/07/2017.
