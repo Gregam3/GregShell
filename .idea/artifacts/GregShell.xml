@@ -21,8 +21,8 @@
       <element id="file-copy" path="$USER_HOME$/Downloads/httpclient-4.3.3.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/httpcore-4.4.6.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/httpcore-nio-4.1.jar" />
-      <element id="file-copy" path="$USER_HOME$/Downloads/jaunt1.3.1.jar" />
       <element id="file-copy" path="$USER_HOME$/Downloads/unirest-java-1.4.9.jar" />
+      <element id="file-copy" path="D:/Downloads/jaunt1.3.2.jar" />
     </root>
   </artifact>
 </component>
