@@ -30,26 +30,49 @@ public class Main extends Application {
 
         root.getStylesheets().add(getClass().getResource("/stylesheet.css").toExternalForm());
 
-
         UIController.setUpInterface(root);
 
+        configureStage(primaryStage, root);
+    }
 
-        primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
-            if (key.getCode() == KeyCode.ENTER) {
-                String command = UIController.getStringFromCommandLine();
-                try {
-                    UIController.addToTerminal(command);
-                    Console.submitCommand(command);
-                } catch (Exception e) {
-                    UIController.addToTerminal("There was an error during the execution of this command - " + e.getClass().getSimpleName() + ": " + e.getMessage());
-//                    e.printStackTrace();
-                }
-            }
-        });
+    private void configureStage(Stage primaryStage, Pane root) {
+        primaryStage = addKeyEventsToStage(primaryStage);
 
         primaryStage.setTitle("Greg Shell " + VERSION_NUMBER);
         primaryStage.setScene(new Scene(root, WIDTH, HEIGHT, Paint.valueOf("black")));
+
+        primaryStage.setMaxHeight(HEIGHT);
+        primaryStage.setMaxHeight(WIDTH);
+
         primaryStage.show();
+    }
+
+    private Stage addKeyEventsToStage(Stage primaryStage) {
+        primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (key) -> {
+            switch (key.getCode()) {
+                case ENTER:
+                    String command = UIController.getStringFromCommandLine();
+                    try {
+                        UIController.addToTerminal(command);
+                        Console.submitCommand(command);
+                    } catch (Exception e) {
+                        UIController.addToTerminal("There was an error during the execution of this command - "
+                                + e.getClass().getSimpleName() + ": " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+
+                case UP:
+                    UIController.setUserInputText(Console.getPreviousCommand());
+                    break;
+
+                case DOWN:
+                    UIController.setUserInputText(Console.getNextCommand());
+                    break;
+            }
+        });
+
+        return primaryStage;
     }
 
     public static void main(String[] args) {

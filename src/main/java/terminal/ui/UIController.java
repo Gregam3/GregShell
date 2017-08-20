@@ -34,11 +34,14 @@ public class UIController {
 
     public static void addToTerminal(String command) {
         submittedCommands.add(command);
+        //Index 0 is the user input field
         ((TextField) root.getChildren().get(0)).clear();
+
+        //Index 1 is the command backlog list
         ((ListView)root.getChildren().get(1)).setItems(submittedCommands);
     }
 
-    public static void commandNotFound(String commandName) {
+    public static void outputCommandNotFound(String commandName) {
         addToTerminal("The command \"" +commandName +"\" was not found." );
     }
 
@@ -46,5 +49,7 @@ public class UIController {
         submittedCommands.clear();
     }
 
-
+    public static void setUserInputText(String newText) {
+        ((TextField) root.getChildren().get(0)).setText(newText);
+    }
 }
