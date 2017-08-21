@@ -7,6 +7,7 @@ import terminal.functionality.Console;
  * Created by Greg Mitten on 18/07/2017.
  */
 public class GoogleCommand extends AbstractCommand {
+
     @Override
     public void execute(String parameters) throws Exception {
         Runtime.getRuntime().exec(

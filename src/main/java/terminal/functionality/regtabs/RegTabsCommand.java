@@ -2,6 +2,7 @@ package terminal.functionality.regtabs;
 
 import terminal.functionality.AbstractCommand;
 import terminal.functionality.Console;
+import terminal.ui.UIController;
 
 /**
  * Created by Greg Mitten on 18/07/2017.
@@ -17,5 +18,7 @@ public class RegTabsCommand extends AbstractCommand {
                         " && launcher.exe https://twitter.com/?lang=en-gb" +
                         " && exit\""
         );
+
+        UIController.addToTerminal("Tabs opened with opera.");
     }
 }

@@ -19,7 +19,7 @@ public class Console {
     public static final String COMMAND_DELIMITER = " ";
     private static List<String> enteredCommandQueue = new LinkedList<>();
     private static Map<String, Command> commandMappings = new HashMap<>();
-    public static final String COMMAND_TO_RUN_OPERA = "\"cd C:\\Program Files\\Opera && launcher.exe";
+    public static final String COMMAND_TO_RUN_OPERA = "\"cd C:/Program Files/Opera && launcher.exe";
     private static int commandIndex = -1;
 
 

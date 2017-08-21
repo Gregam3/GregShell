@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import terminal.functionality.Utility;
 
 import java.util.LinkedList;
 
@@ -51,5 +52,9 @@ public class UIController {
 
     public static void setUserInputText(String newText) {
         ((TextField) root.getChildren().get(0)).setText(newText);
+    }
+
+    public static void showOpeningMessage() {
+        UIController.addToTerminal(Utility.getTimeOfDayIntroduction());
     }
 }

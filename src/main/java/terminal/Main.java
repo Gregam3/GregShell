@@ -38,11 +38,15 @@ public class Main extends Application {
     private void configureStage(Stage primaryStage, Pane root) {
         primaryStage = addKeyEventsToStage(primaryStage);
 
-        primaryStage.setTitle("Greg Shell " + VERSION_NUMBER);
+        primaryStage.setTitle("Greg Shell - BETA " + VERSION_NUMBER);
         primaryStage.setScene(new Scene(root, WIDTH, HEIGHT, Paint.valueOf("black")));
 
         primaryStage.setMaxHeight(HEIGHT);
         primaryStage.setMaxHeight(WIDTH);
+
+//        primaryStage.setResizable(false);
+
+        UIController.showOpeningMessage();
 
         primaryStage.show();
     }
