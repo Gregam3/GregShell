@@ -34,7 +34,8 @@ public class UIController {
     }
 
     public static void addToTerminal(String command) {
-        submittedCommands.add(command);
+        submittedCommands.add(0, command);
+
         //Index 0 is the user input field
         ((TextField) root.getChildren().get(0)).clear();
 
@@ -54,7 +55,8 @@ public class UIController {
         ((TextField) root.getChildren().get(0)).setText(newText);
     }
 
-    public static void showOpeningMessage() {
+    public static void showOpeningMessage(long startTime) {
         UIController.addToTerminal(Utility.getTimeOfDayIntroduction());
+        UIController.addToTerminal("Launch time " + (System.currentTimeMillis() - startTime) + "ms");
     }
 }

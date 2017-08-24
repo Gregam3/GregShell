@@ -16,11 +16,13 @@ public class Main extends Application {
     @SuppressWarnings("converted")
     public static int WIDTH = 650;
     public static int HEIGHT = 330;
-    private static Double VERSION_NUMBER = 1.0;
+    private static final Double VERSION_NUMBER = 1.0;
+    public static final String NAME = "Greg";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Console.setupCommands();
+        long startTime = System.currentTimeMillis();
+
         Pane root = new Pane();
 
         primaryStage.getIcons().add(
@@ -32,13 +34,16 @@ public class Main extends Application {
 
         UIController.setUpInterface(root);
 
-        configureStage(primaryStage, root);
+        configureStage(primaryStage, root, startTime);
+
+        Console.setupCommands();
+
     }
 
-    private void configureStage(Stage primaryStage, Pane root) {
+    private void configureStage(Stage primaryStage, Pane root, long startTime) {
         primaryStage = addKeyEventsToStage(primaryStage);
 
-        primaryStage.setTitle("Greg Shell - BETA " + VERSION_NUMBER);
+        primaryStage.setTitle(NAME + "Shell - BETA " + VERSION_NUMBER);
         primaryStage.setScene(new Scene(root, WIDTH, HEIGHT, Paint.valueOf("black")));
 
         primaryStage.setMaxHeight(HEIGHT);
@@ -46,7 +51,7 @@ public class Main extends Application {
 
 //        primaryStage.setResizable(false);
 
-        UIController.showOpeningMessage();
+        UIController.showOpeningMessage(startTime);
 
         primaryStage.show();
     }

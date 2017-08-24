@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" name="GregShell">
+  <artifact type="javafx" build-on-make="true" name="GregShell">
     <output-path>$PROJECT_DIR$/out/artifacts/GregShell</output-path>
     <properties id="javafx-properties">
       <options>

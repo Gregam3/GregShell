@@ -4,6 +4,7 @@ import terminal.functionality.cls.ClsCommand;
 import terminal.functionality.copyspam.CopySpamCommand;
 import terminal.functionality.exit.ExitCommand;
 import terminal.functionality.google.GoogleCommand;
+import terminal.functionality.quickpush.QuickPushCommand;
 import terminal.functionality.regtabs.RegTabsCommand;
 import terminal.functionality.splashpoint.SplashpointCommand;
 import terminal.functionality.streams.StreamsCommand;
@@ -69,5 +70,6 @@ public class Console {
         new RegTabsCommand().setUp();
         new SplashpointCommand().setUp();
         new CopySpamCommand().setUp();
+        new QuickPushCommand().setUp();
     }
 }
