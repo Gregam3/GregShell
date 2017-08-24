@@ -14,7 +14,8 @@ public class QuickPushCommand extends AbstractCommand {
                         "\"cd C:/Users/i7676925/IdeaProjects/GregShell && " +
                         "git add -A && " +
                         "git commit -m \"" + parameters +"\" && " +
-                        "git push \""
+                        "git push && " +
+                        "exit\""
         );
     }
 }
