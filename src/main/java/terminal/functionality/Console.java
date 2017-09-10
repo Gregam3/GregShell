@@ -9,6 +9,7 @@ import terminal.functionality.regtabs.RegTabsCommand;
 import terminal.functionality.splashpoint.SplashpointCommand;
 import terminal.functionality.streams.StreamsCommand;
 import terminal.functionality.twitch.TwitchCommand;
+import terminal.functionality.updateversion.UpdateVersionCommand;
 import terminal.ui.UIController;
 
 import java.util.*;
@@ -71,5 +72,6 @@ public class Console {
         new SplashpointCommand().setUp();
         new CopySpamCommand().setUp();
         new QuickPushCommand().setUp();
+        new UpdateVersionCommand().setUp();
     }
 }

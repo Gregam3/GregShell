@@ -18,6 +18,7 @@ public class UIController {
         root = newRoot;
         submittedCommands = FXCollections.observableList(new LinkedList<String>());
 
+        
         //Refer to TextField with index 0
         root.getChildren().add(UIBuilder.buildCommandInput());
 
@@ -57,6 +58,6 @@ public class UIController {
 
     public static void showOpeningMessage(long startTime) {
         UIController.addToTerminal(Utility.getTimeOfDayIntroduction());
-        UIController.addToTerminal("Launch time " + (System.currentTimeMillis() - startTime) + "ms");
+        UIController.addToTerminal("Launch time " + (System.currentTimeMillis() - startTime) + "ms + windows shortcut garbage");
     }
 }
